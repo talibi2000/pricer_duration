@@ -32,7 +32,7 @@ def calcul_emprunt(profil, capital, taux_interet, date_maturite, VALUE_DATE, per
 
         return d1, d2
 
-    dff = pd.read_excel('C:\\Users\\HP\\Desktop\\Output\\TCI.xlsx', sheet_name='DATA')
+    dff = pd.read_excel('TCII.xlsx', sheet_name='DATA')
     if periodicite == 'annuel':
         increment = relativedelta(months=12)
         frequence_paiement = 1
