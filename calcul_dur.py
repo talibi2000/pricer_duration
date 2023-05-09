@@ -61,7 +61,7 @@ def calcul_emprunt(profil, capital, taux_interet, date_maturite, VALUE_DATE, per
             flux.append(annuite)
             amortissement = annuite - interets
             capital_rest -= amortissement
-            n = int((date_actuelle - VALUE_DATE).days / 360)
+            n = (date_actuelle - VALUE_DATE).days / 360
             periodes.append(n)
             discount_factor = 1 / (1 + ((taux_interet_periodique) ** (periodes[j])))
             discount_factors.append(discount_factor)
@@ -82,7 +82,7 @@ def calcul_emprunt(profil, capital, taux_interet, date_maturite, VALUE_DATE, per
             annuite = amortissement + interets
             flux.append(interets)
             capital_rest -= amortissement
-            n = int((date_actuelle - VALUE_DATE).days / 360)
+            n = (date_actuelle - VALUE_DATE).days / 360
             periodes.append(n)
             discount_factor = 1 / (1 + ((taux_interet_periodique) ** (periodes[j])))
             discount_factors.append(discount_factor)
@@ -111,7 +111,7 @@ def calcul_emprunt(profil, capital, taux_interet, date_maturite, VALUE_DATE, per
             annuite = interets + amortissement
             date_actuelle += increment
             capital_rest -= amortissement
-            n = int((date_actuelle - VALUE_DATE).days / 360)
+            n = (date_actuelle - VALUE_DATE).days / 360
             periodes.append(n)
             discount_factor = 1 / (1 + ((taux_interet_periodique) ** (periodes[j])))
             discount_factors.append(discount_factor)
